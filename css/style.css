@@ -1,8 +1,23 @@
 body {
-  background-image: url(..//img/cork.png);
+  background-image: url(../img/cork.png);
+  background-size: contain;
+  background-position: center;
+  margin: 0;
 }
 
 .title-header {
   background-image: url(../img/wall.png);
+  background-size: contain;
+  background-position: center;
   height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.title-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
 }
