@@ -1,3 +1,7 @@
+body {
+  background-image: url(..//img/cork.png);
+}
+
 .title-header {
   background-image: url(../img/wall.png);
   height: 150px;
