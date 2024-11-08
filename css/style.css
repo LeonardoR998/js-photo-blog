@@ -4,7 +4,7 @@ body {
   background-position: center;
   margin: 0;
 }
-
+/* STILE TITOLO */
 .title-header {
   background-image: url(../img/wall.png);
   background-size: contain;
@@ -20,4 +20,26 @@ body {
   margin: 0;
   font-size: 2rem;
   font-weight: bold;
+}
+
+/* STILE CARD*/
+.card {
+  border: 10px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.card:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  cursor: pointer;
 }
