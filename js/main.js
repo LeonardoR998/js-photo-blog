@@ -27,8 +27,8 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
     const cards = document.querySelectorAll(".card");
 
     cards.forEach((card) => {
-      card.addEventListener("click", (e) => {
-        if (e.target.closest(".close-btn")) {
+      card.addEventListener("click", (event) => {
+        if (event.target.closest(".close-btn")) {
           return;
         }
         card.classList.add("open");
@@ -39,7 +39,7 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
         );
       });
       const closeButton = card.querySelector(".close-btn");
-      closeButton.addEventListener("click", (e) => {
+      closeButton.addEventListener("click", (event) => {
         card.classList.remove("open");
 
         closeButton.classList.add("d-none");
