@@ -16,6 +16,7 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
               <img src="${card.url}" class="card-img-top" alt="${card.title}">
               <div class="card-body">
                 <h5 class="card-title text-center">${card.title}</h5>
+                <button class="close-btn btn btn-danger position-absolute top-0 end-0 m-3 d-none">Chiudi</button>
               </div>
             </div>
           </div>
@@ -25,6 +26,7 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
     cardRow.innerHTML = cardHTML;
   })
+
   .catch((error) => {
     console.error("Errore nel caricamento delle foto:", error);
   });
