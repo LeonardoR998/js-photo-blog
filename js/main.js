@@ -9,11 +9,14 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
     cards.forEach((card) => {
       cardHTML += `
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-          <div class="card h-100">
-            <img src="${card.url}" class="card-img-top" alt="${card.title}">
-            <div class="card-body">
-              <h5 class="card-title text-center">${card.title}</h5>
+        <div class="col-12 col-md-6 col-lg-4 mb-5">
+          <div class="card-wrapper position-relative h-100">
+            <img src="./img/pin.svg" class="pin-icon" alt="Pin Icon">
+            <div class="card h-100">
+              <img src="${card.url}" class="card-img-top" alt="${card.title}">
+              <div class="card-body">
+                <h5 class="card-title text-center">${card.title}</h5>
+              </div>
             </div>
           </div>
         </div>
