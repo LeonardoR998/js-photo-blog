@@ -1,10 +1,12 @@
+/* Imposta un'immagine di sfondo per l'intera pagina */
 body {
   background-image: url(../img/cork.png);
   background-size: contain;
   background-position: center;
   margin: 0;
 }
-/* STILE TITOLO */
+
+/* Stile del titolo */
 .title-header {
   background-image: url(../img/wall.png);
   background-size: contain;
@@ -16,34 +18,38 @@ body {
   color: black;
 }
 
+/* Stile del testo nel titolo */
 .title-header h1 {
   margin: 0;
   font-size: 2rem;
   font-weight: bold;
 }
 
-/* STILE CARD*/
+/* Stile per le carte */
 .card {
   border: 10px solid #ccc;
   border-radius: 10px;
-  overflow: hidden;
-  height: 100%;
+  overflow: hidden; /* Nasconde contenuti eccedenti */
+  height: 100%; /* Altezza al 100% del contenitore */
 }
 
+/* Stile dell'immagine all'interno della card */
 .card-img-top {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: cover; /* Adatta l'immagine mantenendo le proporzioni */
   border-bottom: 2px solid #ddd;
 }
 
+/* Effetto hover sulla card */
 .card:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(5deg); /* Ingrandisce e ruota leggermente */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 10; /* Porta la card in primo piano */
   cursor: pointer;
 }
 
+/* Wrapper per la card */
 .card-wrapper {
   position: relative;
   display: flex;
@@ -51,37 +57,41 @@ body {
   align-items: center;
 }
 
+/* Effetto hover per nascondere l'icona del pin */
 .card:hover .pin-icon,
 .card-wrapper:hover .pin-icon {
-  opacity: 0;
+  opacity: 0; /* Rende l'icona invisibile */
 }
 
+/* Nasconde il pulsante di chiusura di default */
 .card .close-btn {
   display: none;
 }
 
+/* Mostra il pulsante di chiusura quando la card è aperta */
 .card.open .close-btn {
   display: block;
-  z-index: 10;
+  z-index: 10; /* Porta il pulsante sopra la card */
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
+/* Stile della card quando è aperta */
 .card.open {
   transform: scale(1.1);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
-  z-index: 100;
+  z-index: 100; /* Porta la card in primo piano */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   max-width: 80vw;
   max-height: 80vh;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
 }
 
-/* STILE PIN */
+/* Stile per l'icona del pin */
 .pin-icon {
   position: absolute;
   top: -10px;
@@ -89,5 +99,5 @@ body {
   transform: translateX(-50%);
   width: 35px;
   height: auto;
-  z-index: 20;
+  z-index: 20; /* Porta l'icona in primo piano */
 }
